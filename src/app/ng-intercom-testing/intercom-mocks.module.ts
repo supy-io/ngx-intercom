@@ -1,7 +1,7 @@
 import { ModuleWithProviders, NgModule } from '@angular/core'
 import { RouterTestingModule } from '@angular/router/testing'
 import {
-    Intercom, IntercomConfig, IntercomHideDirective, IntercomShowDirective,
+    Intercom, IntercomConfigObject, IntercomHideDirective, IntercomShowDirective,
     IntercomShowMessagesDirective, IntercomShowNewMessageDirective,
     IntercomShutdownDirective, IntercomTrackEventDirective
 } from '../ng-intercom/index'
@@ -36,11 +36,11 @@ import { IntercomMocks } from './intercom-mocks'
     ]
 })
 export class IntercomTestingModule {
-    static forRoot(config: IntercomConfig): ModuleWithProviders<IntercomTestingModule> {
+    static forRoot(config: IntercomConfigObject): ModuleWithProviders<IntercomTestingModule> {
         return {
             ngModule: IntercomTestingModule,
             providers: [
-                { provide: IntercomConfig, useValue: config },
+                { provide: IntercomConfigObject, useValue: config },
                 { provide: Intercom, useClass: IntercomMocks }
             ]
         }

@@ -3,7 +3,7 @@ import { filter } from 'rxjs/operators'
 import { Router, NavigationEnd } from '@angular/router'
 import { DOCUMENT, isPlatformBrowser } from '@angular/common'
 
-import { IntercomConfig } from '../shared/intercom-config'
+import { IntercomConfigObject } from '../shared/intercom-config-object.service'
 import { IntercomBootInput } from '../types/intercom-boot-input'
 
 /**
@@ -17,7 +17,7 @@ export class Intercom {
   private renderer2: Renderer2
 
   constructor(
-    @Inject(IntercomConfig) private config: IntercomConfig,
+    @Inject(IntercomConfigObject) private config: IntercomConfigObject,
     @Inject(PLATFORM_ID) protected platformId: Object,
     @Optional() @Inject(Router) private router: Router,
     private rendererFactory: RendererFactory2,
@@ -214,7 +214,7 @@ export class Intercom {
     return
   }
 
-  injectIntercomScript(conf: IntercomConfig, afterInjectCallback: (ev: Event) => any): void {
+  injectIntercomScript(conf: IntercomConfigObject, afterInjectCallback: (ev: Event) => any): void {
 
     if (!isPlatformBrowser(this.platformId)) {
       return
@@ -242,7 +242,7 @@ export class Intercom {
     (<any>window).Intercom('update', conf)
   }
 
-  loadIntercom(config: IntercomConfig, afterLoadCallback: (ev?: Event) => any): void {
+  loadIntercom(config: IntercomConfigObject, afterLoadCallback: (ev?: Event) => any): void {
     if (!isPlatformBrowser(this.platformId)) {
       return
     }

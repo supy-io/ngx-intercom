@@ -7,7 +7,7 @@ import { IntercomShowDirective } from './directives/show.directive'
 import { IntercomShutdownDirective } from './directives/shutdown.directive'
 import { IntercomTrackEventDirective } from './directives/track-event.directive'
 import { Intercom } from './intercom/intercom'
-import { IntercomConfig } from './shared/intercom-config'
+import { IntercomConfigObject } from './shared/intercom-config-object.service'
 
 
 @NgModule({
@@ -32,16 +32,16 @@ import { IntercomConfig } from './shared/intercom-config'
   ],
   providers: [
     Intercom,
-    IntercomConfig
+    IntercomConfigObject
   ]
 })
 export class IntercomModule {
-  static forRoot(config: IntercomConfig): ModuleWithProviders<IntercomModule> {
+  static forRoot(config: IntercomConfigObject): ModuleWithProviders<IntercomModule> {
     return {
       ngModule: IntercomModule,
       providers: [
         Intercom,
-        { provide: IntercomConfig, useValue: config },
+        { provide: IntercomConfigObject, useValue: config },
       ]
     }
   }

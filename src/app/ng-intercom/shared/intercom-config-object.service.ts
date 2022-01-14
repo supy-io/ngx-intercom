@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'
 
 @Injectable()
-export class IntercomConfig {
+export class IntercomConfigObject {
   /**
    * Pass APP_ID using this config or when call `boot()` method
    */

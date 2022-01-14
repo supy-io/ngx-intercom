@@ -1,4 +1,6 @@
-export interface IntercomBootInput {
+import { IntercomConfig } from './intercom-config'
+
+export interface IntercomBootInput extends IntercomConfig {
     custom_launcher_selector?: string;
     user_id?: string;
     email?: string;
@@ -7,5 +9,4 @@ export interface IntercomBootInput {
      * If app_id is not passed here or in config, error will be thrown.
      */
     app_id?: string;
-    [propName: string]: any;
 }
