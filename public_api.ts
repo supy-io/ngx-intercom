@@ -1,4 +1,5 @@
 export { Intercom } from './src/app/ng-intercom/intercom/intercom'
+export { IntercomBootInput } from './src/app/ng-intercom/types/intercom-boot-input'
 export { IntercomConfig } from './src/app/ng-intercom/shared/intercom-config'
 export { IntercomHideDirective } from './src/app/ng-intercom/directives/hide.directive'
 export { IntercomModule } from './src/app/ng-intercom/intercom.module'

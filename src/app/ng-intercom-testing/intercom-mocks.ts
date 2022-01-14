@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { isPlatformBrowser } from '@angular/common'
 
 import { IntercomConfig } from '../ng-intercom/shared/intercom-config'
-import {  BootInput } from '../ng-intercom/types/boot-input'
+import { IntercomBootInput } from '../ng-intercom/types/intercom-boot-input'
 import { Intercom } from '../ng-intercom/intercom/intercom'
 
 /**
@@ -38,7 +38,7 @@ export class IntercomMocks extends Intercom {
      * This is useful in situations like a one-page Javascript based application where the user may not be logged in
      * when the page loads. You call this method with the standard intercomSettings object.
      */
-    public boot(intercomData?: BootInput): void {
+    public boot(intercomData?: IntercomBootInput): void {
         return
     }
 

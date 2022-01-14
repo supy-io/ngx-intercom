@@ -1,4 +1,5 @@
 export { Intercom } from './intercom/intercom'
+export { IntercomBootInput } from './types/intercom-boot-input'
 export { IntercomConfig } from './shared/intercom-config'
 export { IntercomHideDirective } from './directives/hide.directive'
 export { IntercomModule } from './intercom.module'

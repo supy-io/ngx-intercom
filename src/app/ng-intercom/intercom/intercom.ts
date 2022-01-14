@@ -4,7 +4,7 @@ import { Router, NavigationEnd } from '@angular/router'
 import { DOCUMENT, isPlatformBrowser } from '@angular/common'
 
 import { IntercomConfig } from '../shared/intercom-config'
-import { BootInput } from '../types/boot-input'
+import { IntercomBootInput } from '../types/intercom-boot-input'
 
 /**
  * A provider with every Intercom.JS method
@@ -55,11 +55,14 @@ export class Intercom {
    * This is useful in situations like a one-page Javascript based application where the user may not be logged in
    * when the page loads. You call this method with the standard intercomSettings object.
    */
-  public boot(intercomData?: BootInput): void {
+  public boot(intercomData?: IntercomBootInput): void {
     if (!isPlatformBrowser(this.platformId)) {
       return
     }
     const app_id = intercomData.app_id ? intercomData.app_id : this.config.appId
+    if (!app_id) {
+      throw new Error('Please provide Intercom app_id either in module config or in the `boot()` method');
+    }
     // Run load and attach to window
     this.loadIntercom(this.config, (event?: Event) => {
       // then boot the intercom js
@@ -187,11 +190,11 @@ export class Intercom {
   }
 
   /**
-   * If you would like to trigger a tour based on an action a user or visitor takes in your site or application, 
-   * ou can use this API method. You need to call this method with the id of the tour you wish to show. The id of 
+   * If you would like to trigger a tour based on an action a user or visitor takes in your site or application,
+   * ou can use this API method. You need to call this method with the id of the tour you wish to show. The id of
    * the tour can be found in the “Use tour everywhere” section of the tour editor.
    *
-   * Please note that tours shown via this API must be published and the “Use tour everywhere” section must be 
+   * Please note that tours shown via this API must be published and the “Use tour everywhere” section must be
    * turned on. If you're calling this API using an invalid tour id, nothing will happen.
    */
   public startTour(tourId: number): void {
