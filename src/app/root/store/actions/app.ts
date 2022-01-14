@@ -22,7 +22,7 @@ export class LoadPackAction implements Action {
 
 // App Load Pack
 export class UnloadPackAction implements Action {
-  type = ActionTypes.LOAD_PACK
+  type = ActionTypes.UNLOAD_PACK
   constructor(public payload: {id: string}) { }
 }
 

@@ -1,6 +1,5 @@
 import 'zone.js/dist/zone-node'
 import 'reflect-metadata'
-import { renderModuleFactory } from '@angular/platform-server'
 import { ngExpressEngine } from '@nguniversal/express-engine'
 import { provideModuleMap } from '@nguniversal/module-map-ngfactory-loader'
 import * as express from 'express'
