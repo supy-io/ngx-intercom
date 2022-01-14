@@ -10,14 +10,11 @@ This is an Intercom wrapper for Angular 2+ which supports AoT and SSR.
 
 It intends to support all documented intercom methods and PRs for functionality is greatly appreciated.
 
-### BETA VERSION
+### STABLE VERSION
 
 `master` is now hosting the latest stable version of `@supy-io/ngx-intercom`.
 
 If you find issues with this version, please file an issue as soon as possible so we can take a look at it. We appreciate your cooperation!
-
-### ALPHA VERSION
-If you want to try the latest features, check out the 7.0.0-alpha branch! Features include automatic script loading and intercom directives! If you find an issue, please report it!
 
 ### Installation
 
@@ -81,7 +78,7 @@ To run tests: `npm test`
 
 To run distribution: `npm run build:dist`
 
-To publish `npm run build:dist && npm publish dist`
+To publish `npm run build:dist && npm publish ./dist`
 
 
 ### Credits
