@@ -1,8 +1,15 @@
 import { Injectable } from '@angular/core'
 
 @Injectable()
-export class IntercomConfig {
-  appId: string
+export class IntercomConfigObject {
+  /**
+   * Pass APP_ID using this config or when call `boot()` method
+   */
+  appId?: string
+  /**
+   * Update Intercom plugin on each route change.
+   * Default: false
+   */
   updateOnRouterChange?: boolean
   /**
    * Customize left or right position of messenger

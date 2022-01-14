@@ -1,5 +1,5 @@
 import { Inject, ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
-import { Intercom, IntercomConfig } from '../ng-intercom'
+import { Intercom, IntercomConfigObject } from '../ng-intercom'
 
 @Component({
   selector: 'app-root',

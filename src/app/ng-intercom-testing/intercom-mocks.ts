@@ -2,8 +2,8 @@ import { Inject, Injectable, PLATFORM_ID, Optional, RendererFactory2 } from '@an
 import { Router } from '@angular/router'
 import { isPlatformBrowser } from '@angular/common'
 
-import { IntercomConfig } from '../ng-intercom/shared/intercom-config'
-import {  BootInput } from '../ng-intercom/types/boot-input'
+import { IntercomConfigObject } from '../ng-intercom/shared/intercom-config-object.service'
+import { IntercomBootInput } from '../ng-intercom/types/intercom-boot-input'
 import { Intercom } from '../ng-intercom/intercom/intercom'
 
 /**
@@ -13,7 +13,7 @@ import { Intercom } from '../ng-intercom/intercom/intercom'
 export class IntercomMocks extends Intercom {
 
     constructor(
-        @Inject(IntercomConfig) config: IntercomConfig,
+        @Inject(IntercomConfigObject) config: IntercomConfigObject,
         @Inject(PLATFORM_ID) platformId: Object,
         @Optional() @Inject(Router) router: Router
     ) {
@@ -38,7 +38,7 @@ export class IntercomMocks extends Intercom {
      * This is useful in situations like a one-page Javascript based application where the user may not be logged in
      * when the page loads. You call this method with the standard intercomSettings object.
      */
-    public boot(intercomData?: BootInput): void {
+    public boot(intercomData?: IntercomBootInput): void {
         return
     }
 
@@ -149,7 +149,7 @@ export class IntercomMocks extends Intercom {
         return
     }
 
-    l(conf: IntercomConfig): Function {
+    l(conf: IntercomConfigObject): Function {
 
         // if (!isPlatformBrowser(this.platformId)) {
         //   return
@@ -159,7 +159,7 @@ export class IntercomMocks extends Intercom {
         }
     }
 
-    loadIntercom(config: IntercomConfig): void {
+    loadIntercom(config: IntercomConfigObject): void {
         return
     }
 }
