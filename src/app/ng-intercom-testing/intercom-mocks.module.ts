@@ -36,7 +36,7 @@ import { IntercomMocks } from './intercom-mocks'
     ]
 })
 export class IntercomTestingModule {
-    static forRoot(config: IntercomConfig): ModuleWithProviders {
+    static forRoot(config: IntercomConfig): ModuleWithProviders<IntercomTestingModule> {
         return {
             ngModule: IntercomTestingModule,
             providers: [
