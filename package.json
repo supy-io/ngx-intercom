@@ -1,6 +1,6 @@
 {
   "name": "@supy-io/ngx-intercom",
-  "version": "13.1.5",
+  "version": "13.1.8",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -46,6 +46,7 @@
     "ngsw:config": "node_modules/.bin/ngsw-config dist ngsw-config.json",
     "ngsw:copy": "cp node_modules/@angular/service-worker/ngsw-worker.js dist/",
     "test": "run-s test:ng test:e2e test:server",
+    "publish": "npm publish ./dist --access public",
     "test:ng": "ng test --watch=false",
     "test:e2e": "ng e2e",
     "test:ng:watch": "ng test",
@@ -56,6 +57,12 @@
     "clean": "rm -rf dist"
   },
   "main": "./dist/ng-intercom.js",
+  "peerDependencies": {
+    "@angular/common": "13.1.2",
+    "@angular/core": "13.1.2",
+    "@angular/router": "13.1.2",
+    "rxjs": "7.5.2"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "13.1.3",
     "@angular/animations": "13.1.2",
@@ -130,6 +137,7 @@
     "npm": ">= 8"
   },
   "dependencies": {
+    "@supy-io/ngx-intercom": "^13.1.8",
     "tslib": "2.3.1"
   }
 }
