@@ -1,6 +1,6 @@
 {
   "name": "@supy-io/ngx-intercom",
-  "version": "13.1.8",
+  "version": "13.2.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -137,7 +137,6 @@
     "npm": ">= 8"
   },
   "dependencies": {
-    "@supy-io/ngx-intercom": "^13.1.8",
     "tslib": "2.3.1"
   }
 }
