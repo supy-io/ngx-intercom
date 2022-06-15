@@ -10,6 +10,15 @@ export interface IntercomConfig {
   app_id?: string
 
   /**
+   * Regional data hosting
+   *
+   * US (default):  https://api-iam.intercom.io
+   * EU:            https://api-iam.eu.intercom.io
+   * Australia:     https://api-iam.au.intercom.io
+   */
+  api_base?: string
+
+  /**
    * Customize left or right position of messenger
    */
   alignment?: 'left' | 'right'
