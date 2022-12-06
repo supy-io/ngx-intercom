@@ -5,16 +5,13 @@ import { FiveZeroZeroComponent } from './500.component'
 import { fiveZeroZeroRouter } from './500.router'
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    fiveZeroZeroRouter
-  ],
-  declarations: [
-    FiveZeroZeroComponent
-  ],
-  entryComponents: [
-    FiveZeroZeroComponent
-  ]
+    imports: [
+        CommonModule,
+        SharedModule,
+        fiveZeroZeroRouter
+    ],
+    declarations: [
+        FiveZeroZeroComponent
+    ]
 })
 export class FiveZeroZeroModule { }

@@ -155,7 +155,6 @@
       }
     }
   },
-  "defaultProject": "ng-intercom",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

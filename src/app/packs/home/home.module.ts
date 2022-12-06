@@ -10,17 +10,14 @@ import { EffectsModule } from '@ngrx/effects'
 import { HomeEffects } from './store/effects/home'
 
 @NgModule({
-  imports: [
-    CommonModule,
-    SharedModule,
-    homeRouter,
-    // EffectsModule.forFeature([ HomeEffects ]),
-  ],
-  declarations: [
-    HomeComponent
-  ],
-  entryComponents: [
-    HomeComponent
-  ]
+    imports: [
+        CommonModule,
+        SharedModule,
+        homeRouter,
+        // EffectsModule.forFeature([ HomeEffects ]),
+    ],
+    declarations: [
+        HomeComponent
+    ]
 })
 export class HomeModule { }
