@@ -1,3 +1,10 @@
+# Deprecation notice:
+
+This package is no longer maintained, because the official package `@intercom/messenger-js-sdk` exists, which does what we need without spending time on maintenance.
+Feel free to fork and publish.
+Thank you.
+
+
 # @supy-io/ngx-intercom
 
 [![npm](https://img.shields.io/npm/v/@supy-io/ngx-intercom.svg)](https://www.npmjs.com/package/@supy-io/ngx-intercom)
